@@ -1,0 +1,8 @@
+Name:xie
+SunetID:001
+
+1. What's const-correctness and why is it important for programmers?
+确保值不可被改变，防止意外更改，提高安全性
+
+2. Is your class const-correct? How do you know?
+T MyClass<T>::getValue() const

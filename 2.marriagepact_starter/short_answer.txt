@@ -1,0 +1,19 @@
+1. 
+std::set    二叉搜索树（红黑树）有序 对数时间的增删查
+std::unordered_set  哈希表 无序 常数时间的增删查(ideal)
+
+std::size_t hash_student_name(const std::string& name) {
+    std::size_t hash = 0;
+    for (char c : name) {
+        hash = hash * 31 + c;  // 31 是一个质数，用于散列
+    }
+    return hash;
+}
+
+2.
+std::queue默认用std::deque为底层容器，也可以更改为用std::list和std::vector。
+std::list为双向链表，是一个好的选择，std::vector在尾部插入高效，但是在头部删除时效率较低，因此这不是一个好的选择。
+
+3.
+存储指针出于性能的考虑，避免字符串的复制，
+但如果set被销毁，那么这些指针会变为悬空指针，可能导致崩溃。
