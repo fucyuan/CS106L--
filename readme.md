@@ -16,6 +16,10 @@
 
 ## 作业
 
+```
+git clone https://github.com/cs106l/cs106l-assignments.git
+```
+
 1. **simpleenroll_starter**  
 使用输入输出流处理CSV文件
 

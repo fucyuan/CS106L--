@@ -31,9 +31,9 @@ std::set<std::string> get_applicants(std::string filename) {
 }
 
 // 查找匹配的学生，返回一个包含指针的队列
-std::queue<const std::string *, std::list<const std::string *>>
-find_matches(std::set<std::string> &students) {
-  std::queue<const std::string *, std::list<const std::string *>> matches;  // 用队列存储指向匹配学生的指针
+using SQ=std::queue<const std::string *, std::list<const std::string *>>;
+SQ find_matches(std::set<std::string> &students) {
+  SQ matches;  // 用队列存储指向匹配学生的指针
   
   // 遍历所有学生姓名
   for (auto &student : students) {
@@ -42,7 +42,7 @@ find_matches(std::set<std::string> &students) {
     ss >> first >> last;  // 将姓名拆分为名字和姓氏
     
     // 匹配条件：名字的第一个字母是'A'且姓氏的第一个字母是'X'
-    if (first[0] == 'A' && last[0] == 'X') {
+    if (first[0] == 'J' && last[0] == 'H') {
       matches.push(&student);  // 如果匹配，加入到匹配队列中
     }
   }
